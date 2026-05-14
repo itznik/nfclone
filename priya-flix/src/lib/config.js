@@ -4,8 +4,8 @@ export const siteConfig = {
   // Login Details
   auth: {
     username: "happy birthday",
-    password: "love",
-    errorMessage: "Incorrect details. Hint: What day is it and how do I feel about you?"
+    password: "darling",
+    errorMessage: "Incorrect details. Hint: Try 'happy birthday' and 'darling'"
   },
 
   // Fallback Placeholder Image (if any of your real images fail to load)
@@ -13,15 +13,15 @@ export const siteConfig = {
 
   // Profiles
   profiles: [
-    { id: 1, name: "Priya 👑", img: "/priya.jpg", isMain: true },
-    { id: 2, name: "Nikunj", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png", isMain: false },
-    { id: 3, name: "Guests", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg", isMain: false },
-    { id: 4, name: "Kids", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-vnl1thqhqnc3ntd0.jpg", isMain: false }
+    { id: 1, name: "Priya 🌸", img: "/priya.jpg", isMain: true },
+    { id: 2, name: "Nikunj 😉", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png", isMain: false },
+    { id: 3, name: "Couple 🧿", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg", isMain: false },
+    { id: 4, name: "Niya 🫂", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-vnl1thqhqnc3ntd0.jpg", isMain: false }
   ],
 
   // Browse Page - Billboard
   billboard: {
-    title: "Priya's 24th",
+    title: "Priya's 21st",
     description: "A critically acclaimed celebration of the most amazing girl in the world. Starring Priya and Nikunj, featuring unforgettable memories, lots of love, and a very special birthday surprise.",
     bgImage: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop"
   },
