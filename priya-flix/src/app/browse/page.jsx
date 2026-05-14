@@ -3,8 +3,9 @@
 
 import { useRouter } from 'next/navigation';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
-import Navbar from '@components/Navbar'; // Ensure this path matches your setup
-import Row from '@components/Row';
+// Use relative paths to step back twice (out of browse, out of app) into components
+import Navbar from '../../components/Navbar'; 
+import Row from '../../components/Row';
 
 export default function Browse() {
   const router = useRouter();
