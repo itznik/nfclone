@@ -12,10 +12,10 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (id.toLowerCase() === 'happy birthday' && password.toLowerCase() === 'love') {
+    if (id.toLowerCase() === 'happy birthday' && password.toLowerCase() === 'darling') {
       router.push('/profiles');
     } else {
-      setError('Incorrect details. Hint: Try "happy birthday" and "love"');
+      setError('Incorrect details. Hint: Try "happy birthday" and "darling"');
     }
   };
 
