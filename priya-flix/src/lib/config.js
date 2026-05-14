@@ -42,6 +42,7 @@ export const siteConfig = {
   // Celebration Page
   celebration: {
     videoPlaceholder: "https://i.postimg.cc/28YX2Hxm/IMG-3056.avif",
+    audioSrc: "/Zehar(KoshalWorld.Com).mp3",
     letter: [
       "Every great show has a star, and in the story of my life, it has always been you.",
       "I wanted to build something completely unique for you this year. Because a standard card just isn't enough for someone who means this much to me.",
