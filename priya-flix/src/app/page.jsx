@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { siteConfig } from '../lib/config';
 
 export default function Login() {
   const [id, setId] = useState('');
@@ -12,10 +13,14 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (id.toLowerCase() === 'happy birthday' && password.toLowerCase() === 'darling') {
+    // Validate against our central config file
+    if (
+      id.toLowerCase() === siteConfig.auth.username.toLowerCase() && 
+      password.toLowerCase() === siteConfig.auth.password.toLowerCase()
+    ) {
       router.push('/profiles');
     } else {
-      setError('Incorrect details. Hint: Try "happy birthday" and "darling"');
+      setError(siteConfig.auth.errorMessage);
     }
   };
 
@@ -27,17 +32,17 @@ export default function Login() {
         style={{ backgroundImage: `url('https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg')` }}
       />
       
-      {/* Gradient Overlay for Netflix Vibe */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-b sm:from-black/80 sm:via-black/40 sm:to-black/80"></div>
 
-      {/* Netflix Logo - Exact Hex Color and responsive positioning */}
+      {/* Logo */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-10 z-20">
         <h1 className="text-[#E50914] text-3xl sm:text-5xl font-black tracking-tighter">
           PRIYAFLIX
         </h1>
       </div>
 
-      {/* Login Form Container */}
+      {/* Login Form */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,7 +78,6 @@ export default function Login() {
           />
           <button 
             type="submit" 
-            /* Fixed standard red background, slightly darker red on hover */
             className="w-full bg-[#E50914] text-white py-3 sm:py-4 rounded font-bold mt-4 hover:bg-[#C11119] transition-colors duration-300 text-sm sm:text-base"
           >
             Sign In
