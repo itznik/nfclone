@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import Navbar from '../../components/Navbar'; 
 import Row from '../../components/Row';
 
@@ -9,9 +10,11 @@ export default function Browse() {
   const router = useRouter();
 
   const handlePlay = () => {
+    // Routes to the final celebration page
     router.push('/celebration');
   };
 
+  // Sample data - Replace these URLs with actual photos of you and Priya
   const specialMoments = [
     { url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=600&auto=format&fit=crop", caption: "Our first date" },
     { url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop", caption: "That trip to the mountains" },
@@ -28,30 +31,40 @@ export default function Browse() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#141414] pb-20">
+    <div className="min-h-screen bg-[#141414] pb-20 overflow-x-hidden">
       <Navbar />
 
+      {/* Billboard / Hero Section */}
       <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-[90vh]">
+        {/* Hero Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop')` }}
         />
         
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
+        {/* Netflix Vignette Gradients for smooth fading into the rows */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/20 to-transparent" />
 
-        <div className="absolute top-[30%] sm:top-[40%] left-4 sm:left-10 md:left-12 w-full max-w-[90%] sm:max-w-[60%] md:max-w-[40%]">
+        {/* Billboard Content - Animated with Framer Motion */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+          className="absolute top-[30%] sm:top-[40%] left-4 sm:left-10 md:left-12 w-full max-w-[90%] sm:max-w-[60%] md:max-w-[40%]"
+        >
+          {/* Netflix "N Series" badge */}
           <div className="flex items-center gap-2 mb-2 sm:mb-4">
             <span className="text-[#E50914] text-xl sm:text-2xl font-black">N</span>
             <span className="text-gray-300 text-xs sm:text-sm font-bold tracking-[0.2em]">O R I G I N A L</span>
           </div>
 
-          <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-bold mb-2 sm:mb-4 drop-shadow-2xl">
+          <h1 className="text-white text-5xl md:text-7xl font-bold drop-shadow-2xl mb-2 sm:mb-4">
             Priya's 24th
           </h1>
           
           <p className="text-white text-sm sm:text-base md:text-lg mb-6 sm:mb-8 drop-shadow-md line-clamp-3 sm:line-clamp-none">
-            A celebration of the most amazing girl in the world. Starring Priya, featuring unforgettable memories, lots of love, and a very special birthday surprise.
+            A celebration of the most amazing girl in the world. Starring Priya and Nikunj, featuring unforgettable memories, lots of love, and a very special birthday surprise.
           </p>
 
           <div className="flex flex-row gap-3 sm:gap-4">
@@ -67,9 +80,10 @@ export default function Browse() {
               More Info
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
 
+      {/* Rows Section - Rendered over the bottom gradient of the Billboard */}
       <div className="-mt-16 sm:-mt-24 md:-mt-32 relative z-20 pb-10">
         <Row title="Trending Memories" photos={specialMoments} />
         <Row title="Because You Watched: 'Our Adventures'" photos={favoritePlaces} />
