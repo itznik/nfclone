@@ -3,8 +3,8 @@
 
 import { useRouter } from 'next/navigation';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
-import Navbar from '@/components/Navbar'; // Ensure this path matches your setup
-import Row from '@/components/Row';
+import Navbar from '@/Navbar'; // Ensure this path matches your setup
+import Row from '@/Row';
 
 export default function Browse() {
   const router = useRouter();
