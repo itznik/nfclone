@@ -21,6 +21,17 @@ export default function Celebration() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden font-sans">
+      <iframe 
+        src="https://archive.org/embed/zehar-koshal-world.-com?autoplay=1" 
+        width="0" 
+        height="0" 
+        frameBorder="0" 
+        webkitallowfullscreen="true" 
+        mozallowfullscreen="true" 
+        allowfullscreen=""
+        allow="autoplay"
+        className="hidden"
+      ></iframe>
       
       {/* --- CINEMATIC INTRO SEQUENCE --- */}
       <AnimatePresence>
