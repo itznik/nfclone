@@ -28,7 +28,7 @@ export default function Celebration() {
         frameBorder="0" 
         webkitallowfullscreen="true" 
         mozallowfullscreen="true" 
-        allowfullscreen=""
+        allowFullScreen=""
         allow="autoplay"
         className="hidden"
       ></iframe>
