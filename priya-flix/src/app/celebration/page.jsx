@@ -91,7 +91,7 @@ export default function Celebration() {
                   <button onClick={() => setIsMuted(!isMuted)} className="text-2xl md:text-3xl hover:scale-110 transition-transform">
                     {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
                   </button>
-                  <span className="text-sm md:text-lg font-medium tracking-wide">Priya's 24th - The Final Episode</span>
+                  <span className="text-sm md:text-lg font-medium tracking-wide">Pilu's 21st - The Final Episode</span>
                 </div>
                 <div className="flex items-center gap-4">
                   {/* Fake Progress Bar */}
@@ -110,13 +110,13 @@ export default function Celebration() {
                 transition={{ delay: 1, duration: 1 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-green-500 font-bold text-lg md:text-xl">99% Match</span>
+                  <span className="text-green-500 font-bold text-lg md:text-xl">100% Match</span>
                   <span className="border border-white/40 text-white/80 px-2 py-0.5 text-xs md:text-sm rounded-sm">2026</span>
                   <span className="border border-white/40 text-white/80 px-2 py-0.5 text-xs md:text-sm rounded-sm">HD</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                  Happy Birthday, Priya.
+                  Happy Birthday, Pilu.
                 </h1>
 
                 <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed font-light">
