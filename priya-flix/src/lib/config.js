@@ -40,7 +40,7 @@ export const siteConfig = {
 
   // Celebration Page
   celebration: {
-    videoPlaceholder: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2000&auto=format&fit=crop",
+    videoPlaceholder: "https://i.postimg.cc/28YX2Hxm/IMG-3056.avif",
     letter: [
       "Every great show has a star, and in the story of my life, it has always been you.",
       "I wanted to build something completely unique for you this year. Because a standard card just isn't enough for someone who means this much to me.",
