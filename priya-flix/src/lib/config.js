@@ -21,21 +21,20 @@ export const siteConfig = {
 
   // Browse Page - Billboard
   billboard: {
-    title: "Priya's 21st",
+    title: "Pilu's 21st",
     description: "A critically acclaimed celebration of the most amazing girl in the world. Starring Priya and Nikunj, featuring unforgettable memories, lots of love, and a very special birthday surprise.",
-    bgImage: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop"
+    bgImage: "https://i.postimg.cc/fLdbbq6P/20251227-162144.jpg"
   },
 
   // Browse Page - Memory Rows
   categories: {
     trending: [
-      { url: "PLACEHOLDER_URL_1", caption: "Our first date" },
-      { url: "PLACEHOLDER_URL_2", caption: "Trip to the mountains" },
-      // ... add as many as you want, if the URL is broken, it will fall back gracefully!
+      { url: "", caption: "Our first date" },
+      { url: "", caption: "Trip to the mountains" },
     ],
     adventures: [
-      { url: "PLACEHOLDER_URL_3", caption: "The cafe" },
-      { url: "PLACEHOLDER_URL_4", caption: "Beach walk" },
+      { url: "", caption: "The cafe" },
+      { url: "", caption: "Beach walk" },
     ]
   },
 
