@@ -76,7 +76,7 @@ export default function Celebration() {
               */}
               <div 
                 className="absolute inset-0 bg-cover bg-center opacity-60"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2000&auto=format&fit=crop')` }}
+                style={{ backgroundImage: `url('https://i.postimg.cc/28YX2Hxm/IMG-3056.avif')` }}
               />
               
               {/* Bottom Gradient for Player Controls */}
