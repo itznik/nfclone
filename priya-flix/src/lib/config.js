@@ -13,7 +13,7 @@ export const siteConfig = {
 
   // Profiles
   profiles: [
-    { id: 1, name: "Priya 🌸", img: "/priya.jpg", isMain: true },
+    { id: 1, name: "Priya 🌸", img: "https://i.postimg.cc/jqDJBKZf/20250930-111215.jpg", isMain: true },
     { id: 2, name: "Nikunj 😉", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png", isMain: false },
     { id: 3, name: "Couple 🧿", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg", isMain: false },
     { id: 4, name: "Niya 🫂", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-vnl1thqhqnc3ntd0.jpg", isMain: false }
@@ -29,12 +29,13 @@ export const siteConfig = {
   // Browse Page - Memory Rows
   categories: {
     trending: [
-      { url: "", caption: "Our first date" },
-      { url: "", caption: "Trip to the mountains" },
+      { url: "https://i.postimg.cc/FshDjY9m/Snapchat-122300930.jpg", caption: "Pizza date at domino's" },
+      { url: "https://i.postimg.cc/N0tMMv67/Snapchat-716177674.jpg", caption: "Valentine's Day"},
+      { url: "https://i.postimg.cc/3wGXMhKc/Snapchat-19086038.jpg", caption: "First time head on shoulder" },
     ],
     adventures: [
-      { url: "", caption: "The cafe" },
-      { url: "", caption: "Beach walk" },
+      { url: "https://i.postimg.cc/0N7wWCnv/Snapchat-1884616157.jpg", caption: "The snow mountain" },
+      { url: "https://i.postimg.cc/dQ5Tx32w/20250930-105508-(2).jpg", caption: "2nd Navratri" },
     ]
   },
 
