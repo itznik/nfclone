@@ -1,9 +1,7 @@
-// src/app/browse/page.jsx
 'use client';
 
 import { useRouter } from 'next/navigation';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
-// Use relative paths to step back twice (out of browse, out of app) into components
 import Navbar from '../../components/Navbar'; 
 import Row from '../../components/Row';
 
@@ -11,11 +9,9 @@ export default function Browse() {
   const router = useRouter();
 
   const handlePlay = () => {
-    // This will route to the final birthday celebration page!
     router.push('/celebration');
   };
 
-  // Sample data for your rows - replace with actual URLs of your photos
   const specialMoments = [
     { url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=600&auto=format&fit=crop", caption: "Our first date" },
     { url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop", caption: "That trip to the mountains" },
@@ -35,21 +31,16 @@ export default function Browse() {
     <div className="min-h-screen bg-[#141414] pb-20">
       <Navbar />
 
-      {/* Billboard / Hero Section */}
       <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-[90vh]">
-        {/* Replace this with a gorgeous photo of Priya or the two of you */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop')` }}
         />
         
-        {/* Netflix Vignette Gradients */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
 
-        {/* Billboard Content */}
         <div className="absolute top-[30%] sm:top-[40%] left-4 sm:left-10 md:left-12 w-full max-w-[90%] sm:max-w-[60%] md:max-w-[40%]">
-          {/* Netflix "N Series" badge */}
           <div className="flex items-center gap-2 mb-2 sm:mb-4">
             <span className="text-[#E50914] text-xl sm:text-2xl font-black">N</span>
             <span className="text-gray-300 text-xs sm:text-sm font-bold tracking-[0.2em]">O R I G I N A L</span>
@@ -79,7 +70,6 @@ export default function Browse() {
         </div>
       </div>
 
-      {/* Rows Section */}
       <div className="-mt-16 sm:-mt-24 md:-mt-32 relative z-20 pb-10">
         <Row title="Trending Memories" photos={specialMoments} />
         <Row title="Because You Watched: 'Our Adventures'" photos={favoritePlaces} />
