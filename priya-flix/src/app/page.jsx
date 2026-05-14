@@ -13,39 +13,38 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (id.toLowerCase() === 'happy birthday' && password.toLowerCase() === 'love') {
-      // Smooth route transition
       router.push('/profiles');
     } else {
-      setError('Incorrect details. Hint: What day is it?');
+      setError('Incorrect details. Hint: Try "happy birthday" and "love"');
     }
   };
 
   return (
-    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image - Replace with a collage or a nice dark image of you two */}
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: `url('https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg')` }}
       />
       
-      {/* Gradient Overlay */}
+      {/* Gradient Overlay for Netflix Vibe */}
       <div className="absolute inset-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-b sm:from-black/80 sm:via-black/40 sm:to-black/80"></div>
 
-      {/* Netflix Logo Top Left */}
-      <div className="absolute top-4 left-4 sm:top-8 sm:left-12 z-20">
-        <h1 className="text-netflix text-4xl sm:text-5xl font-black tracking-tighter">
+      {/* Netflix Logo - Exact Hex Color and responsive positioning */}
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-10 z-20">
+        <h1 className="text-[#E50914] text-3xl sm:text-5xl font-black tracking-tighter">
           PRIYAFLIX
         </h1>
       </div>
 
-      {/* Login Form Container with Framer Motion */}
+      {/* Login Form Container */}
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-md bg-black/80 sm:bg-black/75 p-10 sm:p-16 rounded-md"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-10 w-full max-w-[90%] sm:max-w-md bg-black/80 sm:bg-black/75 p-8 sm:p-16 rounded-md shadow-2xl mt-12 sm:mt-0"
       >
-        <h2 className="text-white text-3xl font-bold mb-8">Sign In</h2>
+        <h2 className="text-white text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Sign In</h2>
         
         {error && (
           <motion.div 
@@ -61,20 +60,21 @@ export default function Login() {
           <input 
             type="text" 
             placeholder="Email or phone number" 
-            className="w-full bg-[#333] text-white px-4 py-3 rounded focus:outline-none focus:bg-[#454545] transition-colors"
+            className="w-full bg-[#333] text-white px-4 py-3 sm:py-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all text-sm sm:text-base"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
           <input 
             type="password" 
             placeholder="Password" 
-            className="w-full bg-[#333] text-white px-4 py-3 rounded focus:outline-none focus:bg-[#454545] transition-colors"
+            className="w-full bg-[#333] text-white px-4 py-3 sm:py-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all text-sm sm:text-base"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button 
             type="submit" 
-            className="w-full bg-netflix text-white py-3 rounded font-bold mt-4 hover:bg-[#f40612] transition-colors"
+            /* Fixed standard red background, slightly darker red on hover */
+            className="w-full bg-[#E50914] text-white py-3 sm:py-4 rounded font-bold mt-4 hover:bg-[#C11119] transition-colors duration-300 text-sm sm:text-base"
           >
             Sign In
           </button>
