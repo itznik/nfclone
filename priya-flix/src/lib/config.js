@@ -14,9 +14,9 @@ export const siteConfig = {
   // Profiles
   profiles: [
     { id: 1, name: "Priya 🌸", img: "https://i.postimg.cc/jqDJBKZf/20250930-111215.jpg", isMain: true },
-    { id: 2, name: "Nikunj 😉", img: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png", isMain: false },
-    { id: 3, name: "Couple 🧿", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg", isMain: false },
-    { id: 4, name: "Niya 🫂", img: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-vnl1thqhqnc3ntd0.jpg", isMain: false }
+    { id: 2, name: "Nikunj 😉", img: "https://i.postimg.cc/3wwwpCq0/20251227-165825-(1).jpg", isMain: false },
+    { id: 3, name: "Couple 🧿", img: "https://i.postimg.cc/3wGXMhKc/Snapchat-19086038.jpg", isMain: false },
+    { id: 4, name: "Niya 🫂", img: "https://i.postimg.cc/FshDjY9m/Snapchat-122300930.jpg", isMain: false }
   ],
 
   // Browse Page - Billboard
